@@ -1,0 +1,15 @@
+create table CUSTOMERS(
+ID_CUSTOMERS serial PRIMARY KEY,
+	NAME varchar,
+	SURNAME varchar,
+	AGE integer
+	
+);
+
+
+create table CONTACTS(
+ID_CONTACTS serial PRIMARY KEY,
+	ID_CUSTOMERS integer REFERENCES CUSTOMERS(ID_CUSTOMERS),
+	TYPE integer,
+	CONTACT varchar
+);
